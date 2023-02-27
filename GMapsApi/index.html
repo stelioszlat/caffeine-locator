@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Caffeine Locator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet"  type="text/css" href="main.css">
+
+  </head>
+  <body>
+    <div id="top"><h1>Caffeine Locator</h1></div>
+    <div id="map"></div>
+    <form action="logout.php" class="logout">
+      <input type="submit" value="Log Out">
+    </form>
+    <form action="show_favorite.php" method="post">
+      <input type="submit" class="button" id="getfav" name="show" value="Show Favorites">
+    </form>
+    <button onclick="getLocation();" class="button">Locate Caffeine</button>
+    <div id="fav">
+      <script>
+
+      </script>
+    </div>
+    <div class="slidecontainer">
+      <input type="range" min="1000" max="10000" value="4000" class="slider" id="myRange">
+    </div>
+    <p class="value">Value: <span id="demo"></span></p>
+    <p></p>
+    <script src="GMapsApi/js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR0j1MbdXYT8lzWYqmWAhhB8NVFiVLh7U&libraries=places&callback=getLocation"
+    async defer></script>
+
+
+  </body>
+</html>
